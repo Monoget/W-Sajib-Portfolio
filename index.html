@@ -105,7 +105,8 @@
                                     Brands Grow, Engage &amp; Convert Online</p>
                             </div>
                             <div data-swiper-parallax="500" class="slide-btns">
-                                <a href="mailto:kabirajsajib@gmail.com" class="theme-btn-s3"><span>Hire Me Now</span></a>
+                                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=kabirajsajib@gmail.com&su=Hire%20Me%20-%20Portfolio%20Inquiry"
+                                    target="_blank" rel="noopener" class="theme-btn-s3"><span>Hire Me Now</span></a>
                                 <ul>
                                     <li class="video-holder">
                                         <a href="https://wa.me/8801612104550" target="_blank" rel="noopener"
@@ -175,7 +176,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="rotate-text">
+            <a href="#contact" class="rotate-text">
                 <div class="circular-text text-roted">
                     <p class="text">Hire Me for Your Next Project</p>
                 </div>
@@ -185,7 +186,7 @@
                     <span></span>
                     <span></span>
                 </div>
-            </div>
+            </a>
             <div class="light-shape-1"></div>
             <div class="light-shape-2"></div>
             <div class="light-shape-3"></div>
@@ -527,14 +528,15 @@
                         <span>Have an Idea?</span>
                         <h2>Let’s Make Something Amazing Together. </h2>
 
-                        <form action="mailto:kabirajsajib@gmail.com" method="get" enctype="text/plain">
+                        <form id="quote-form">
                             <div class="input-field">
-                                <input type="text" name="body" placeholder="Type your Message Here" required>
+                                <input type="text" id="quote-message" placeholder="Type your Message Here" required>
                                 <button type="submit">Get A Quote</button>
                             </div>
                         </form>
                         <div class="wpo-footer-contact-btns" style="margin-top:25px;">
-                            <a href="mailto:kabirajsajib@gmail.com" class="theme-btn-s3"><span>Email Me</span></a>
+                            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=kabirajsajib@gmail.com&su=Portfolio%20Inquiry"
+                                target="_blank" rel="noopener" class="theme-btn-s3"><span>Email Me</span></a>
                             <a href="https://wa.me/8801612104550" target="_blank" rel="noopener" class="theme-btn-s3"
                                 style="margin-left:15px;"><span>WhatsApp Me</span></a>
                         </div>
@@ -574,5 +576,14 @@
     <script src="assets/js/jquery-plugin-collection.js"></script>
     <!-- Custom script for this template -->
     <script src="assets/js/script.js"></script>
+    <script>
+        document.getElementById('quote-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+            var message = document.getElementById('quote-message').value;
+            var subject = encodeURIComponent('Quote Request from Portfolio Website');
+            var body = encodeURIComponent(message);
+            window.open('https://mail.google.com/mail/?view=cm&fs=1&to=kabirajsajib@gmail.com&su=' + subject + '&body=' + body, '_blank');
+        });
+    </script>
 </body>
 </html>
